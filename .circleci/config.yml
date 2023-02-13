@@ -97,6 +97,7 @@ jobs:
             cd module_test
             yarn install --registry http://localhost:4873
             ERRCOUNT=$(eval "npx eslint | wc -l")
+            print $ERRCOUNT errors
             if [ $ERRCOUNT -eq 1 ]; then
               exit 0;
             else
