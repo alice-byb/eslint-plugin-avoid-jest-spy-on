@@ -96,7 +96,12 @@ jobs:
           command: |
             cd module_test
             yarn install --registry http://localhost:4873
-            yarn test
+            ERRCOUNT=$(eval "npx eslint | wc -l")
+            if [ $ERRCOUNT -eq 1 ]; then
+              exit 0;
+            else
+              exit 1
+            fi
       - save_cache:
           key: node_modules-{{ checksum "yarn.lock" }}
           paths:
