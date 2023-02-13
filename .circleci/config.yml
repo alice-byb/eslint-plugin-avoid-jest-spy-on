@@ -96,7 +96,7 @@ jobs:
           command: |
             cd module_test
             yarn install --registry http://localhost:4873
-            ERRCOUNT=$(eval "npx eslint index.js | wc -l")
+            ERRCOUNT=$(eval "npx eslint index.js --max-warnings=1 | wc -l")
             echo $ERRCOUNT errors
             if [ $ERRCOUNT -eq 1 ]; then
               exit 0;
