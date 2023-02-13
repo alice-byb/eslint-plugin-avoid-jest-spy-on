@@ -8,7 +8,7 @@
   "license": "GPL-2.0-or-later",
   "scripts": {
     "build": "rimraf dist && mkdir -p dist && tsc -p tsconfig.json --outDir dist && cp package.json dist/",
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint **/*.ts",
     "ts": "tsc --noEmit",
     "build-and-publish": "npm run build && npm publish --access public",
