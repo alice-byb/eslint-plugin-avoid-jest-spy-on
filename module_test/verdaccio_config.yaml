@@ -5,7 +5,7 @@ uplinks:
     url: https://registry.npmjs.org/
 
 packages:
-  '@*/*':
+  'eslint-plugin-avoid-jest-spy-on':
     access: $all
     publish: $anonymous
     proxy: npmjs
