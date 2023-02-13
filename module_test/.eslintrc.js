@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
   },
   rules: {
-    'jest-no-spyOn/avoid-jest-spyOn': 'error',
+    'avoid-jest-spy-on/avoid-jest-spyOn': 'error',
   },
-  plugins: ['jest-no-spyOn'],
+  plugins: ['avoid-jest-spy-on'],
 };
