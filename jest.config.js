@@ -5,6 +5,8 @@ module.exports = {
     '\\.(ts|tsx)$': '@swc/jest',
   },
   testTimeout: 3000,
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
 };
