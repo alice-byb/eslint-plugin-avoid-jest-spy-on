@@ -1,7 +1,8 @@
 import { ESLintUtils } from '@typescript-eslint/utils';
 import { Expression, PrivateIdentifier, Identifier } from '@typescript-eslint/types/dist/generated/ast-spec';
+import { DOC_PATH } from '../constants';
 
-const createRule = ESLintUtils.RuleCreator(name => `${name}`);
+const createRule = ESLintUtils.RuleCreator(DOC_PATH);
 
 const isIdentifierFromObject = (object: Expression): object is Identifier => object.type === 'Identifier';
 const isIdentifierFromProperty = (object: Expression | PrivateIdentifier): object is Identifier =>
