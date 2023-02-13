@@ -1,0 +1,1 @@
+Avoid using `jest.spyOn` as it is [incompatible](https://github.com/swc-project/swc/issues/3843) with [SWC](https://swc.rs/).
