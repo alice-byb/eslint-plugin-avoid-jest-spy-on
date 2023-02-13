@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "danger", "Dangerfile.ts"]
 }
